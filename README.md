@@ -17,12 +17,12 @@
 
 ## 使用方法
 
-要使用这个 Action，你需要在你的 GitHub 仓库的 secrets 中设置以下两个值：
+要使用这个 Action，你需要在你的 GitHub 仓库的 Secrets 中设置以下两个值：
 
-- `DINGTALK_TOKEN`：你的钉钉机器人的 access token
-- `DINGTALK_SECRET`：你的钉钉机器人的加签密钥
+- **`DINGTALK_TOKEN`**：你的钉钉机器人的 Access Token。可以在钉钉的[Webhook 地址](https://open.dingtalk.com/document/orgapp/obtain-the-webhook-address-of-a-custom-robot#684fffc61f2ly)中找到此值。
+- **`DINGTALK_SECRET`**：你的钉钉机器人的[密钥](https://open.dingtalk.com/document/robots/customize-robot-security-settings#title-7fs-kgs-36x)。
 
-然后，你可以在你的工作流程文件中使用这个 Action。以下是几种不同类型消息的使用示例：
+然后，你可以在你的工作流程文件中使用这个 Action。以下是几种不同类型消息的使用示例
 
 ### 文本消息
 
