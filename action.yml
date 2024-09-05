@@ -1,0 +1,45 @@
+name: 'DingTalk Notification'
+description: '发送各种类型的钉钉通知'
+author: '您的名字或组织名'
+branding:
+  icon: 'bell'
+  color: 'blue'
+inputs:
+  dingtalk_token:
+    description: '钉钉访问令牌'
+    required: true
+  dingtalk_secret:
+    description: '钉钉加签密钥'
+    required: true
+  msg_type:
+    description: '消息类型 (text, link, markdown, actionCard, feedCard)'
+    required: true
+  content:
+    description: '消息内容 (JSON 格式)'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: 检出代码
+      uses: actions/checkout@v3
+
+    - name: 设置 Python 环境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: 安装依赖
+      shell: bash
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: 发送钉钉通知
+      shell: bash
+      env:
+        DINGTALK_TOKEN: ${{ inputs.dingtalk_token }}
+        DINGTALK_SECRET: ${{ inputs.dingtalk_secret }}
+        MSG_TYPE: ${{ inputs.msg_type }}
+        CONTENT: ${{ inputs.content }}
+      run: python ${{ github.action_path }}/send_dingtalk_message.py
