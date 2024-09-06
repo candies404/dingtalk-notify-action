@@ -1,6 +1,6 @@
 name: 'DingTalk Notification'
 description: '发送各种类型的钉钉通知'
-author: '您的名字或组织名'
+author: 'sugar404'
 branding:
   icon: 'bell'
   color: 'blue'
