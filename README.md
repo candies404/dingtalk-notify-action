@@ -28,7 +28,7 @@
 
 ```yaml
 - name: 发送钉钉文本通知
-  uses: candies404/dingtalk-notify-action@v1.0.0
+  uses: candies404/dingtalk-notify-action@latest
   with:
     dingtalk_token: ${{ secrets.DINGTALK_TOKEN }}
     dingtalk_secret: ${{ secrets.DINGTALK_SECRET }}
@@ -40,7 +40,7 @@
 
 ```yaml
 - name: 发送钉钉链接通知
-  uses: candies404/dingtalk-notify-action@v1.0.0
+  uses: candies404/dingtalk-notify-action@latest
   with:
     dingtalk_token: ${{ secrets.DINGTALK_TOKEN }}
     dingtalk_secret: ${{ secrets.DINGTALK_SECRET }}
@@ -52,7 +52,7 @@
 
 ```yaml
 - name: 发送钉钉 Markdown 通知
-  uses: candies404/dingtalk-notify-action@v1.0.0
+  uses: candies404/dingtalk-notify-action@latest
   with:
     dingtalk_token: ${{ secrets.DINGTALK_TOKEN }}
     dingtalk_secret: ${{ secrets.DINGTALK_SECRET }}
@@ -64,7 +64,7 @@
 
 ```yaml
 - name: 发送钉钉 ActionCard 通知
-  uses: candies404/dingtalk-notify-action@v1.0.0
+  uses: candies404/dingtalk-notify-action@latest
   with:
     dingtalk_token: ${{ secrets.DINGTALK_TOKEN }}
     dingtalk_secret: ${{ secrets.DINGTALK_SECRET }}
@@ -76,7 +76,7 @@
 
 ```yaml
 - name: 发送钉钉 FeedCard 通知
-  uses: candies404/dingtalk-notify-action@v1.0.0
+  uses: candies404/dingtalk-notify-action@latest
   with:
     dingtalk_token: ${{ secrets.DINGTALK_TOKEN }}
     dingtalk_secret: ${{ secrets.DINGTALK_SECRET }}
