@@ -23,8 +23,6 @@ def send_dingtalk_message(webhook, secret, msg_type, content):
         msg_type: json.loads(content)
     }
 
-    print("content内容为:", json.dumps(data, ensure_ascii=False, indent=2))
-
     response = requests.post(url, json=data, headers=headers)
     return response.json()
 
